@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #646cff;
+  --secondary-color: #61dafb;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+#root {
+  max-width: 2560px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 200ms ease-in-out;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--primary-color)aa);
+  transform: scale(1.1);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--secondary-color)aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+.read-the-docs {
+  color: #888;
+  transition: color 200ms ease-in-out;
+}
+
+.read-the-docs:hover {
+  color: var(--primary-color);
+}
+
+.image-container img {
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.images-collection {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 0.77rem 1rem;
+  grid-row-gap: 1.5rem;
+}
+.image-container img {
+  width: 200px;
+  height: 200px; /* Add this */
+  object-fit: cover; /* Add this */
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#popup-root .popup-content {
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#popup-root .popup-content input {
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#popup-root .popup-content .success-msg {
+  color: rgb(53, 172, 53);
+  transition: color 200ms ease-in-out;
+}
+
+#popup-root .popup-content .success-msg:hover {
+  color: rgb(0, 128, 0);
+}
+
+#popup-root .imageView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#popup-root .imageView img {
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
